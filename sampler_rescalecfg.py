@@ -14,7 +14,7 @@ class RescaleClassifierFreeGuidance:
 
     def patch(self, model, multiplier):
         
-        def sampler_tonemap_reinhard(cond, uncond, cond_scale):
+        def rescale_cfg(cond, uncond, cond_scale):
             x_cfg = uncond + cond_scale * (cond - uncond)
             ro_pos = torch.std(cond, dim=(1,2,3), keepdim=True)
             ro_cfg = torch.std(x_cfg, dim=(1,2,3), keepdim=True)
@@ -25,7 +25,7 @@ class RescaleClassifierFreeGuidance:
             return x_final
 
         m = model.clone()
-        m.set_model_sampler_cfg_function(sampler_tonemap_reinhard)
+        m.set_model_sampler_cfg_function(rescale_cfg)
         return (m, )
 
 
