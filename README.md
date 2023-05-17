@@ -1,4 +1,4 @@
-## Some experimental custom nodes.
+## Some experimental custom nodes for [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 
 Copy the .py files to your custom_nodes directory to use them.
 
