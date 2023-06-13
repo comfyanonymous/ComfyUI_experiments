@@ -14,7 +14,10 @@ class ModelSamplerTonemapNoiseTest:
 
     def patch(self, model, multiplier):
         
-        def sampler_tonemap_reinhard(cond, uncond, cond_scale):
+        def sampler_tonemap_reinhard(args):
+            cond = args["cond"]
+            uncond = args["uncond"]
+            cond_scale = args["cond_scale"]
             noise_pred = (cond - uncond)
             noise_pred_vector_magnitude = (torch.linalg.vector_norm(noise_pred, dim=(1)) + 0.0000000001)[:,None]
             noise_pred /= noise_pred_vector_magnitude
