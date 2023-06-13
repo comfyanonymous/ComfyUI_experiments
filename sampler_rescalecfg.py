@@ -14,7 +14,11 @@ class RescaleClassifierFreeGuidance:
 
     def patch(self, model, multiplier):
         
-        def rescale_cfg(cond, uncond, cond_scale):
+        def rescale_cfg(args):
+            cond = args["cond"]
+            uncond = args["uncond"]
+            cond_scale = args["cond_scale"]
+
             x_cfg = uncond + cond_scale * (cond - uncond)
             ro_pos = torch.std(cond, dim=(1,2,3), keepdim=True)
             ro_cfg = torch.std(x_cfg, dim=(1,2,3), keepdim=True)
