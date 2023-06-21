@@ -12,13 +12,13 @@ class ModelMergeBlockNumber(comfy_extras.nodes_model_merging.ModelMergeBlocks):
         arg_dict["label_emb."] = argument
 
         for i in range(12):
-            arg_dict["input_blocks.{}".format(i)] = argument
+            arg_dict["input_blocks.{}.".format(i)] = argument
 
         for i in range(3):
-            arg_dict["middle_block.{}".format(i)] = argument
+            arg_dict["middle_block.{}.".format(i)] = argument
 
         for i in range(12):
-            arg_dict["output_blocks.{}".format(i)] = argument
+            arg_dict["output_blocks.{}.".format(i)] = argument
 
         arg_dict["out."] = argument
 
