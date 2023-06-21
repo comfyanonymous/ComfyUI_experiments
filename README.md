@@ -9,3 +9,7 @@ contains ModelSamplerTonemapNoiseTest a node that makes the sampler use a simple
 
 ### sampler_rescalecfg.py
 contains an implementation of the Rescale Classifier-Free Guidance from: https://arxiv.org/pdf/2305.08891.pdf
+
+### advanced_model_merging.py
+
+Node for merging models by block.
