@@ -13,3 +13,7 @@ contains an implementation of the Rescale Classifier-Free Guidance from: https:/
 ### advanced_model_merging.py
 
 Node for merging models by block.
+
+### sdxl_model_merging.py 
+
+Node for merging SDXL base models.
