@@ -17,3 +17,7 @@ Node for merging models by block.
 ### sdxl_model_merging.py 
 
 Node for merging SDXL base models.
+
+### reference_only.py
+
+Contains a node that implements the "reference only controlnet". An example workflow can be found in the workflows folder.
