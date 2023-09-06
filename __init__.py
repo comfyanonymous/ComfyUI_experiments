@@ -1,8 +1,7 @@
 import importlib
 import os
 
-
-node_list = [  # Add list of .py files containing nodes here
+node_list = [ #Add list of .py files containing nodes here
     "advanced_model_merging",
     "reference_only",
     "sampler_rescalecfg",
