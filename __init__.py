@@ -6,6 +6,7 @@ node_list = [ #Add list of .py files containing nodes here
     "reference_only",
     "sampler_rescalecfg",
     "sampler_tonemap",
+    "sampler_tonemap_rescalecfg",
     "sdxl_model_merging"
 ]
 
